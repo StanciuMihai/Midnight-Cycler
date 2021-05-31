@@ -143,6 +143,6 @@ namespace Midnight_Cycler
             {
                 player.Top = base_4.Top - player.Height;
             }
-        }
+        } 
     }
 }
