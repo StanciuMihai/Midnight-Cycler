@@ -61,7 +61,72 @@ namespace Midnight_Cycler
             base_2.Left -= Speed;
             player.Top += gravity;
             Point.Text = "Score -" + points;
-            
+            if(pipe_1.Left<-200)
+            {
+                pipe_1.Left = 1000;
+                points += 5;
+            }
+            else if(pipe_2.Left<200)
+            {
+                pipe_2.Left = 1000;
+                points += 5;
+            }
+            else if (pipe_3.Left < 200)
+            {
+                pipe_3.Left = 1000;
+                points += 5;
+            }
+            else if (pipe_4.Left < 200)
+            {
+                pipe_4.Left = 1000;
+                points += 5;
+            }
+            else if (pipe_5.Left < 200)
+            {
+                pipe_5.Left = 1000;
+                points += 5;
+            }
+            else if (base_2.Left < 200)
+            {
+                base_2.Left = 1000;
+                points += 5;
+            }
+            else if (base_3.Left < 200)
+            {
+                base_3.Left = 1000;
+                points += 5;
+            }
+            else if (base_4.Left < 200)
+            {
+                base_4.Left = 1000;
+                points += 5;
+            }
+
+            else if (player.Bounds.IntersectsWith(pipe_1.Bounds))
+            {
+                EndGame();
+                Point.Text = "Game-Over -" + points;
+            }
+            else if (player.Bounds.IntersectsWith(pipe_2.Bounds))
+            {
+                EndGame();
+                Point.Text = "Game-Over -" + points;
+            }
+            else if (player.Bounds.IntersectsWith(pipe_3.Bounds))
+            {
+                EndGame();
+                Point.Text = "Game-Over -" + points;
+            }
+            else if (player.Bounds.IntersectsWith(pipe_4.Bounds))
+            {
+                EndGame();
+                Point.Text = "Game-Over -" + points;
+            }
+            else if (player.Bounds.IntersectsWith(pipe_5.Bounds))
+            {
+                EndGame();
+                Point.Text = "Game-Over -" + points;
+            }
 
         }
     }
