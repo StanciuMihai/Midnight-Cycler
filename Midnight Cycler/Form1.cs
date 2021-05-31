@@ -127,7 +127,22 @@ namespace Midnight_Cycler
                 EndGame();
                 Point.Text = "Game-Over -" + points;
             }
-
+            else if (player.Bounds.IntersectsWith(base_1.Bounds) && !jump)
+            {
+                player.Top = base_1.Top - player.Height;
+            }
+            else if (player.Bounds.IntersectsWith(base_2.Bounds) && !jump)
+            {
+                player.Top = base_2.Top - player.Height;
+            }
+            else if (player.Bounds.IntersectsWith(base_3.Bounds) && !jump)
+            {
+                player.Top = base_3.Top - player.Height;
+            }
+            else if (player.Bounds.IntersectsWith(base_4.Bounds) && !jump)
+            {
+                player.Top = base_4.Top - player.Height;
+            }
         }
     }
 }
