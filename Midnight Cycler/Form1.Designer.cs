@@ -43,6 +43,7 @@ namespace Midnight_Cycler
             this.player = new System.Windows.Forms.PictureBox();
             this.Point = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pipe_6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.base_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipe_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipe_2)).BeginInit();
@@ -53,6 +54,7 @@ namespace Midnight_Cycler
             ((System.ComponentModel.ISupportInitialize)(this.pipe_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipe_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pipe_6)).BeginInit();
             this.SuspendLayout();
             // 
             // base_1
@@ -152,7 +154,7 @@ namespace Midnight_Cycler
             this.Point.AutoSize = true;
             this.Point.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Point.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Point.Location = new System.Drawing.Point(12, 19);
+            this.Point.Location = new System.Drawing.Point(57, 19);
             this.Point.Name = "Point";
             this.Point.Size = new System.Drawing.Size(100, 25);
             this.Point.TabIndex = 10;
@@ -164,12 +166,23 @@ namespace Midnight_Cycler
             this.timer1.Interval = 30;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pipe_6
+            // 
+            this.pipe_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pipe_6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pipe_6.Location = new System.Drawing.Point(0, 0);
+            this.pipe_6.Name = "pipe_6";
+            this.pipe_6.Size = new System.Drawing.Size(784, 16);
+            this.pipe_6.TabIndex = 11;
+            this.pipe_6.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(784, 411);
+            this.Controls.Add(this.pipe_6);
             this.Controls.Add(this.Point);
             this.Controls.Add(this.player);
             this.Controls.Add(this.pipe_4);
@@ -196,6 +209,7 @@ namespace Midnight_Cycler
             ((System.ComponentModel.ISupportInitialize)(this.pipe_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pipe_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pipe_6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,6 +229,7 @@ namespace Midnight_Cycler
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.Label Point;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pipe_6;
     }
 }
 
