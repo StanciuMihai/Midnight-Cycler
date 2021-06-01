@@ -60,7 +60,7 @@ namespace Midnight_Cycler
             base_4.Left -= Speed;
             base_2.Left -= Speed;
             player.Top += gravity;
-            Point.Text = "Score -" + points;
+            Point.Text = "Score: " + points;
             if(pipe_1.Left<-200)
             {
                 pipe_1.Left = 1000;
@@ -105,27 +105,27 @@ namespace Midnight_Cycler
             else if (player.Bounds.IntersectsWith(pipe_1.Bounds))
             {
                 EndGame();
-                Point.Text = "Game-Over -" + points;
+                Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_2.Bounds))
             {
                 EndGame();
-                Point.Text = "Game-Over -" + points;
+                Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_3.Bounds))
             {
                 EndGame();
-                Point.Text = "Game-Over -" + points;
+                Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_4.Bounds))
             {
                 EndGame();
-                Point.Text = "Game-Over -" + points;
+                Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_5.Bounds))
             {
                 EndGame();
-                Point.Text = "Game-Over -" + points;
+                Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(base_1.Bounds) && !jump)
             {

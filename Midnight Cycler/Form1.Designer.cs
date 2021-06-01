@@ -140,9 +140,9 @@ namespace Midnight_Cycler
             // player
             // 
             this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
-            this.player.Location = new System.Drawing.Point(397, 317);
+            this.player.Location = new System.Drawing.Point(397, 305);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(41, 26);
+            this.player.Size = new System.Drawing.Size(61, 38);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player.TabIndex = 9;
             this.player.TabStop = false;
@@ -150,13 +150,13 @@ namespace Midnight_Cycler
             // Point
             // 
             this.Point.AutoSize = true;
-            this.Point.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Point.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Point.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Point.Location = new System.Drawing.Point(372, 13);
+            this.Point.Location = new System.Drawing.Point(12, 19);
             this.Point.Name = "Point";
-            this.Point.Size = new System.Drawing.Size(66, 16);
+            this.Point.Size = new System.Drawing.Size(100, 25);
             this.Point.TabIndex = 10;
-            this.Point.Text = "Score -0";
+            this.Point.Text = "Score: 0";
             // 
             // timer1
             // 
