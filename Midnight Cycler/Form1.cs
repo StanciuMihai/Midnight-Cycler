@@ -26,7 +26,7 @@ namespace Midnight_Cycler
         private void Form1_Load(object sender, EventArgs e)
         {
             SoundPlayer sp = new SoundPlayer();
-            sp.SoundLocation = "";
+            sp.SoundLocation = @".\Joshua_McLean-Mountain_Trials.wav";
             sp.Play();
         }
         private void EndGame() //Game over function
