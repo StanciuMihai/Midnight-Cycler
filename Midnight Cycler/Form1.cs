@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Threading;
 
 namespace Midnight_Cycler
 {
@@ -25,20 +26,37 @@ namespace Midnight_Cycler
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            timer1.Stop();
+            //Play background music
             SoundPlayer sp = new SoundPlayer();
             sp.SoundLocation = @".\Joshua_McLean-Mountain_Trials.wav";
             sp.PlayLooping();
+            //Display start screen
+            DialogResult res = MessageBox.Show("Hold down space bar to accelerate, release to slow down, press Ok when ready!", "Welocme to Midnight Cycler!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (res == DialogResult.OK)
+            {
+
+                timer1.Start();
+
+            }
+            if (res == DialogResult.Cancel)
+            {
+                Application.Exit();
+            }
+
         }
-        private void EndGame() //Game over function
+        private async Task EndGameAsync() //Game over function
         {
             timer1.Stop();
 
             Point.Visible = true;
+            await Task.Delay(5 * 100);
             DialogResult result;
             result = MessageBox.Show($"Final score: {points} points. Would you like to try again?", "Game Over!", MessageBoxButtons.YesNo);
+            
             if (result == DialogResult.No)
             {
-                System.Windows.Forms.Application.Exit();
+                Application.Exit();
             }
             if (result == DialogResult.Yes)
             {
@@ -129,37 +147,37 @@ namespace Midnight_Cycler
 
             else if (player.Bounds.IntersectsWith(pipe_1.Bounds))
             {
-                EndGame();
+                EndGameAsync();
                 Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_2.Bounds))
             {
-                EndGame();
+                EndGameAsync();
                 Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_3.Bounds))
             {
-                EndGame();
+                EndGameAsync();
                 Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_4.Bounds))
             {
-                EndGame();
+                EndGameAsync();
                 Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_5.Bounds))
             {
-                EndGame();
+                EndGameAsync();
                 Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_6.Bounds))
             {
-                EndGame();
+                EndGameAsync();
                 Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(pipe_7.Bounds))
             {
-                EndGame();
+                EndGameAsync();
                 Point.Text = "Game-Over! Score: " + points;
             }
             else if (player.Bounds.IntersectsWith(base_1.Bounds) && !jump)
