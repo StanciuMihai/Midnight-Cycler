@@ -27,7 +27,7 @@ namespace Midnight_Cycler
         {
             SoundPlayer sp = new SoundPlayer();
             sp.SoundLocation = @".\Joshua_McLean-Mountain_Trials.wav";
-            sp.Play();
+            sp.PlayLooping();
         }
         private void EndGame() //Game over function
         {
@@ -172,6 +172,8 @@ namespace Midnight_Cycler
             {
                 player.Top = base_5.Top - player.Height;
             }
-        } 
+        }
+
+       
     }
 }
