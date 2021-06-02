@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Midnight_Cycler
 {
@@ -24,7 +25,9 @@ namespace Midnight_Cycler
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            SoundPlayer sp = new SoundPlayer();
+            sp.SoundLocation = "";
+            sp.Play();
         }
         private void EndGame() //Game over function
         {
