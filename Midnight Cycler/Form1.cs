@@ -34,6 +34,16 @@ namespace Midnight_Cycler
             timer1.Stop();
 
             Point.Visible = true;
+            DialogResult result;
+            result = MessageBox.Show($"Final score: {points} points. Would you like to try again?", "Game Over!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+            if (result == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
