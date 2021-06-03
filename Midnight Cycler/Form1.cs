@@ -26,6 +26,7 @@ namespace Midnight_Cycler
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //keep the game frozen until a dialog decision is made
             timer1.Stop();
             //Play background music
             SoundPlayer sp = new SoundPlayer();
@@ -35,10 +36,12 @@ namespace Midnight_Cycler
             DialogResult res = MessageBox.Show("Hold down space bar to accelerate, release to slow down, press Ok when ready!", "Welocme to Midnight Cycler!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
+                //start a new game
                 timer1.Start();
             }
             if (res == DialogResult.Cancel)
             {
+                //exit the game
                 Application.Exit();
             }
 
@@ -54,12 +57,12 @@ namespace Midnight_Cycler
             
             if (result == DialogResult.No)
             {
-                
+                //exit the game
                 Application.Exit();
             }
             if (result == DialogResult.Yes)
             {
-                
+                //start a new game
                 Application.Restart();
             }
         }
