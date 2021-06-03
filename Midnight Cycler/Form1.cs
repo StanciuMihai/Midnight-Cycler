@@ -22,7 +22,7 @@ namespace Midnight_Cycler
         int Speed = 12;
         int gravity = 0;
         int points = 0;
-        bool jump = false;
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -35,9 +35,7 @@ namespace Midnight_Cycler
             DialogResult res = MessageBox.Show("Hold down space bar to accelerate, release to slow down, press Ok when ready!", "Welocme to Midnight Cycler!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
-
                 timer1.Start();
-
             }
             if (res == DialogResult.Cancel)
             {
@@ -56,10 +54,12 @@ namespace Midnight_Cycler
             
             if (result == DialogResult.No)
             {
+                
                 Application.Exit();
             }
             if (result == DialogResult.Yes)
             {
+                
                 Application.Restart();
             }
         }
@@ -180,23 +180,23 @@ namespace Midnight_Cycler
                 EndGameAsync();
                 Point.Text = "Game-Over! Score: " + points;
             }
-            else if (player.Bounds.IntersectsWith(base_1.Bounds) && !jump)
+            else if (player.Bounds.IntersectsWith(base_1.Bounds) )
             {
                 player.Top = base_1.Top - player.Height;
             }
-            else if (player.Bounds.IntersectsWith(base_2.Bounds) && !jump)
+            else if (player.Bounds.IntersectsWith(base_2.Bounds) )
             {
                 player.Top = base_2.Top - player.Height;
             }
-            else if (player.Bounds.IntersectsWith(base_3.Bounds) && !jump)
+            else if (player.Bounds.IntersectsWith(base_3.Bounds) )
             {
                 player.Top = base_3.Top - player.Height;
             }
-            else if (player.Bounds.IntersectsWith(base_4.Bounds) && !jump)
+            else if (player.Bounds.IntersectsWith(base_4.Bounds) )
             {
                 player.Top = base_4.Top - player.Height;
             }
-            else if (player.Bounds.IntersectsWith(base_5.Bounds) && !jump)
+            else if (player.Bounds.IntersectsWith(base_5.Bounds) )
             {
                 player.Top = base_5.Top - player.Height;
             }
